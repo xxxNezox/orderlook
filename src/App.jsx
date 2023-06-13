@@ -4,6 +4,7 @@ import './App.css';
 import Welcome from './COMPONENTS/Welcome';
 import Login from './COMPONENTS/Login';
 import Registration from './COMPONENTS/Registration'
+import Main from './COMPONENTS/Main';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path='/' Component={Welcome} />
           <Route path='/login' Component={Login} />
           <Route path='/registration' Component={Registration} />
+          <Route path='/main' Component={Main} />
         </Routes>
       </div>
     </BrowserRouter>

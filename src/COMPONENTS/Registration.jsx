@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import style from '../CSS/Registration.module.css'
 
+
 class Registration extends Component {
 
     constructor(props) {
@@ -39,6 +40,11 @@ class Registration extends Component {
         .then((response) => response.json())
         .then((data) => {
             console.log(data)
+
+            if (data.sucsess) {
+                const url = `/main?restaurantName=${this.state.restaurantName}&isAdmin=true`;
+                window.location.href = url;
+            }
         })
         .catch((error) => {
             console.error(error)

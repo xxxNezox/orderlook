@@ -37,6 +37,12 @@ class Login extends Component {
         .then((response) => response.json())
         .then((data) => {
             console.log(data)
+
+            if (data.sucsess) {
+                const url = `/main?restaurantName=${data.restaurantName}&isAdmin=${data.isAdmin}`;
+                window.location.href = url;
+            }
+
         })
         .catch((error) => {
             console.error(error)
