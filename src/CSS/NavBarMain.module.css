@@ -1,0 +1,32 @@
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px;
+  }
+  
+  .block h1 {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    margin-left: 25px;
+  }
+  
+  .block ul {
+    display: flex;
+    list-style: none;
+    margin-right: 25px;
+  }
+  
+  .block a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+  }
+  
+  .block a:hover {
+    color: rgb(86, 255, 86);
+  }
+  

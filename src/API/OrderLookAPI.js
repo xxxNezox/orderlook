@@ -4,7 +4,7 @@ const app = express();
 const fs = require('fs')
 const path = require('path')
 
-const data = require('../DATA/users.json')
+const data = require('../DATA/users.json');
 const dirFilePath = path.join(__dirname, '..', 'DATA');
 const usersFilePath = path.join(__dirname, '..', 'DATA', 'users.json');
 
@@ -65,6 +65,29 @@ app.post('/api/login', (req, res) => {
 
   console.log(`restaurant: ${restaurantName}, status: ${isAdmin}`);
   res.json(response);
+});
+
+app.get('/api/getdata', (req, res) => {
+  console.log(req.query.restaurantName);
+  const restaurantName = req.query.restaurantName;
+  const dirPath = path.join(dirFilePath, restaurantName);
+
+  try {
+    const aboutData = require(path.join(dirPath, 'about.json'));
+    const menuData = require(path.join(dirPath, 'menu.json'));
+    const ordersData = require(path.join(dirPath, 'orders.json'));
+
+
+    const response = {
+      about: aboutData,
+      menu: menuData,
+      orders: ordersData
+    };
+    console.log(response)
+    res.json(response);
+  } catch (error) {
+    res.status(404).json({ message: 'Restaurant data not found' });
+  }
 });
 
 app.listen(3001, () => {

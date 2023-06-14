@@ -1,1 +1,86 @@
-{}
+{
+  "55": {
+    "adminPassword": "66",
+    "employeePassword": "77"
+  },
+  "99": {
+    "adminPassword": "88",
+    "employeePassword": "77"
+  },
+  "155": {
+    "adminPassword": "5",
+    "employeePassword": "6"
+  },
+  "555": {
+    "adminPassword": "90",
+    "employeePassword": "000"
+  },
+  "776": {
+    "adminPassword": "4532",
+    "employeePassword": "53452"
+  },
+  "997": {
+    "adminPassword": "88",
+    "employeePassword": "77"
+  },
+  "999": {
+    "adminPassword": "000",
+    "employeePassword": "333"
+  },
+  "990000": {
+    "adminPassword": "fgh",
+    "employeePassword": "fgh"
+  },
+  "testrest": {
+    "adminPassword": "1",
+    "employeePassword": "2"
+  },
+  "testrest55": {
+    "adminPassword": "166",
+    "employeePassword": "288"
+  },
+  "testrest6": {
+    "adminPassword": "1",
+    "employeePassword": "2"
+  },
+  "testrest67": {
+    "adminPassword": "1",
+    "employeePassword": "2"
+  },
+  "BEBRA": {
+    "adminPassword": "9",
+    "employeePassword": "0"
+  },
+  "BEBRA6": {
+    "adminPassword": "9",
+    "employeePassword": "0"
+  },
+  "fdd": {
+    "adminPassword": "sfdsfg",
+    "employeePassword": "dfgdfgg"
+  },
+  "000": {
+    "adminPassword": "000",
+    "employeePassword": "000"
+  },
+  "testrest777": {
+    "adminPassword": "1",
+    "employeePassword": "2"
+  },
+  "mac": {
+    "adminPassword": "5",
+    "employeePassword": "6"
+  },
+  "abcd": {
+    "adminPassword": "77",
+    "employeePassword": "66"
+  },
+  "testrest666": {
+    "adminPassword": "1777",
+    "employeePassword": "2345"
+  },
+  "shrek": {
+    "adminPassword": "1",
+    "employeePassword": "2"
+  }
+}
