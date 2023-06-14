@@ -1,0 +1,19 @@
+.block {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .block img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .block p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  

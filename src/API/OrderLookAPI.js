@@ -89,6 +89,33 @@ app.get('/api/getdata', (req, res) => {
     res.status(404).json({ message: 'Restaurant data not found' });
   }
 });
+//beta
+app.post("/api/updateAbout", (req, res) => {
+  const { restaurantName, headline, url, text } = req.body;
+  console.log(req.body)
+  console.log(restaurantName)
+  const dirPath = path.join(dirFilePath, restaurantName);
+  const aboutFilePath = path.join(dirPath, "about.json");
+
+  try {
+    if (!fs.existsSync(dirPath)) {
+      fs.mkdirSync(dirPath);
+    }
+
+    const aboutData = {
+      headline: headline,
+      url: url,
+      text: text,
+    };
+
+    fs.writeFileSync(aboutFilePath, JSON.stringify(aboutData));
+
+    res.json({ success: true, message: "Data saved successfully" });
+  } catch (error) {
+    res.status(500).json({ success: false, message: "Failed to save data" });
+  }
+});
+
 
 app.listen(3001, () => {
   console.log('API server listening on port 3001');

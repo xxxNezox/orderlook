@@ -3,6 +3,7 @@ import { Route, Routes, Outlet } from "react-router-dom";
 
 import NavBarMain from "./NavBarMain";
 import About from "./About";
+import Settings from "./Settings";
 
 class Main extends Component {
   constructor(props) {
@@ -30,9 +31,9 @@ class Main extends Component {
         .then((response) => response.json())
         .then((jsonData) => {
             this.setState({
-                aboutData: jsonData.aboutData, 
-                menuData: jsonData.menuData, 
-                ordersData: jsonData.ordersData
+                aboutData: jsonData.about, 
+                menuData: jsonData.menu, 
+                ordersData: jsonData.orders
             })
             console.log(this.state)
             console.log(jsonData)
@@ -44,12 +45,14 @@ class Main extends Component {
 
   render() {
     const { restaurantName, isAdmin, aboutData, menuData, ordersData } = this.state;
+    console.log(restaurantName)
 
     return (
       <div>
         <NavBarMain name={restaurantName} status={isAdmin} />  
         <Routes>
                 <Route path="/about" element={<About data={aboutData}/>} />
+                <Route path="/settings" element={<Settings name={restaurantName}/>} />
         </Routes>
         <Outlet />
       </div>
